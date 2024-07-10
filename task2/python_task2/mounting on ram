@@ -1,0 +1,12 @@
+665  sudo mount -t tmpfs -o size=2G tmpfs /home/sebastian/ramdisk
+  666  mount
+  667  cd ramdisk
+  668  time python3 main.py  cal mare sare
+  669  cd
+  670  cd Desktop/LinuxScripts/task2/python_task2/ 
+  671  python3 main.py
+  672  python3 main.py mune fisire cal msi
+  673  python3 main.py output-onlinefiletools.txt cal mare sare
+  674  python3 main.py output-onlinefiletools.txt cal mare sare masina
+  675  history
+

@@ -1,0 +1,97 @@
+1) USB mounted directory
+
+sebastian@debian:~/Desktop/LinuxScripts/task2/python_task2$ time python3 main.py output-onlinefiletools.txt cal mare sare masina
+output-onlinefiletools.txt
+cal
+mare
+sare
+masina
+6
+output-onlinefiletools.txt
+Cuvantul  cal apare de 1
+Cuvantul  mare apare de 0
+Cuvantul  sare apare de 0
+Cuvantul  masina apare de 2
+
+real	0m0.013s
+user	0m0.008s
+sys	0m0.004s
+sebastian@debian:~/Desktop/LinuxScripts/task2/python_task2$ time python3 main.py output-onlinefiletools.txt cal mare sare masina
+output-onlinefiletools.txt
+cal
+mare
+sare
+masina
+6
+output-onlinefiletools.txt
+Cuvantul  cal apare de 1
+Cuvantul  mare apare de 0
+Cuvantul  sare apare de 0
+Cuvantul  masina apare de 2
+
+real	0m0.036s
+user	0m0.030s
+sys	0m0.004s
+
+
+2)RAM mounted directory
+
+sudo mount -t tmpfs -o size=2G tmpfs /home/sebastian/ramdisk
+mount
+tmpfs on /home/sebastian/ramdisk type tmpfs (rw,relatime,size=2097152k,inode64)
+
+sebastian@debian:~$ cd ramdisk
+sebastian@debian:~/ramdisk$ time python3 main.py output-onlinefiletools.txt cal mare sare masina
+output-onlinefiletools.txt
+cal
+mare
+sare
+masina
+6
+output-onlinefiletools.txt
+Cuvantul  cal apare de 1
+Cuvantul  mare apare de 0
+Cuvantul  sare apare de 0
+Cuvantul  masina apare de 2
+
+real	0m0.012s
+user	0m0.005s
+sys	0m0.008s
+sebastian@debian:~/ramdisk$ time python3 main.py output-onlinefiletools.txt cal mare sare masina
+output-onlinefiletools.txt
+cal
+mare
+sare
+masina
+6
+output-onlinefiletools.txt
+Cuvantul  cal apare de 1
+Cuvantul  mare apare de 0
+Cuvantul  sare apare de 0
+Cuvantul  masina apare de 2
+
+real	0m0.012s
+user	0m0.009s
+sys	0m0.004s
+sebastian@debian:~/ramdisk$ time python3 main.py output-onlinefiletools.txt cal mare sare masina
+output-onlinefiletools.txt
+cal
+mare
+sare
+masina
+6
+output-onlinefiletools.txt
+Cuvantul  cal apare de 1
+Cuvantul  mare apare de 0
+Cuvantul  sare apare de 0
+Cuvantul  masina apare de 2
+
+real	0m0.012s
+user	0m0.012s
+sys	0m0.000s
+sebastian@debian:~/ramdisk
+
+
+Comparand cele 2   , observam ca in cele mai multe cazuri , Programul care se afla cu
+directorul montat pe ram este in general mai rapid
+
