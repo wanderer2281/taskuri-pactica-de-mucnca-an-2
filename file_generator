@@ -1,0 +1,21 @@
+import sys
+import os
+import random
+import string
+alphabet={'a','b','c','d','e','f','g','h','i','k','l','j','m','n','o','p','q','r','s','t','u','v','w','x','y','z'}
+file_path = sys.argv[1]
+print(sys.argv[1])
+
+n = 1024 ** 3 # 1 Gb of text
+chars = ''.join([random.choice(string.ascii_letters) for i in range(n)])
+i=1
+j=32
+with open(file_path, 'w+') as f:
+    while j<n:
+        for k in range(i,j) :
+            f.write(chars[k])
+        f.write('\n')
+        i = i+32
+        j= j+32
+f.close()
+print(os.path.getsize(file_path))
