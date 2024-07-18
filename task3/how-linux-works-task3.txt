@@ -1,0 +1,49 @@
+            Capitolul 5
+            
+            
+In capitolulu 5 am invatat cum porneste un Kernel Linux(Boots).
+Din aces capitol , 3 idei importante mi-au iesit in evidenta :
+1) La aproapte toate calculatoarele , secventa de pornire este prea rapida ca sa vedem mesagele de pornire
+, astfel putem vedea diagnosticele fie dupa secventa de pornire , in comand prompt, fie apasand ESC sau SHIFT in timp ce se boot-eaza 
+calculatorul , in meniul Boot loaderului .
+2)Kernel-ul area o serie de pasi de initializare , si anume : 1. inspectarea CPU
+2. inspectarea memoriei , 3. descoperirea Device bus 4. Setup-ul auxiliar al subsistemului kernel-ului
+5. montarea filesystem-ului root 6. deschiderea User space-ului 
+
+3) Boot loaders sunt programele ce inceput kernel-ul sistemului Linux. Aceste programe sunt foarte complexe
+, putand selecta diferite kernele din mai multe partiti , si putand fi stocate in numeroase moduri .
+
+            Capitolul 6
+
+In acest capitol am invatat cum se porneste User-space . Astfel , cele mai importante lucruri pe
+care le-am invatat din acest capitol sunt :
+1)init este un program use-space folosit pentru a porni si opri servicile esentiale de sistem , acest fiind 
+implementat pe majoritatea sistemelor Linux sub forma de systemd
+2)Servicile pot fi dependente unele de altele , adica daca un serviciu porneste , trebuie sa porneasca dupa el
+, fie unul fie mai multe servici .
+3) Servicile  pot porni secvential , unele dupa altele , sau in paralel , in functie de
+asezarea resurselor serviciului/unitati ce are ca dependenti toate celelatlte servici/unitati
+
+             Capitolul 7
+    
+In acest capitol am invatat configurarea sistemului , mai precis despre logare , timpul sistemului
+si cum interactioneaza utilizatori cu user-space-ul .Cele mai importante lucruri care reies din acest capitol sunt .
+1) In Linux , sistemele au un output ce transmite mesaje de diagnosticare . Prin acestea putem observa stare sistemelor , unitatilor , fisierelor 
+si a programelor .
+2) In directorul /etc , se afla sistemele de coonfiguratie Linux . Printre acestea se afla fisierele si subdirectoarele 
+ce tin de utilizatori . Unul din cele mai imprtante fisiere aflatr in /etc este
+/etc/passwd , ce contine , numele , parola , UID,GID si directorul de acasa al utilizatorului
+3) Poti programa sarcini repetitive cu Cron si Timer Units . Totusi , pentru ca sarcinile sa fie executate efectiv ,
+Ceasul intern Unix trebuie sa fie setat corespunzator , deoarece sarcinile programate cu Cron si Timer Units se folosesc de
+Ceasul sistemului de operare pentru a determina timpul/perioada la care acestea vor fi executatr
+
+        Capitolul 8
+        
+In acest capitol  am invatat depre procese si cum sunt utilizate resursele hardware ale calculatorului
+Astfel , cele mai importante puncte ce au reiesit din acest capitol sunt :
+1)procesele unui calculator pot fi urmarite in multe moduri , cu comenzi precum ps strace , ltrace , vmstat.
+2)Un proces poate avea unul sau mai multe thread-uri . Toate procesele incep cu un singur thread , totusi cele cu thread-uri multiple
+ continua cu urmatoarele thread-uri dupa primul thread , numit main thread .
+ 3)Poti monitoriza cum sunt impartite resursele analizand ce procese ocupa CPU, cata memorie este utilizata , 
+ si cata informatie este transferata de la dispozitivele I/O . acest lucru poate fi observat in terminal la demararea anumitor comenzi
+ precum top , free etc.
