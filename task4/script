@@ -1,0 +1,4 @@
+#!/bin/sh
+echo First argument: $1
+echo Third argument: $3
+

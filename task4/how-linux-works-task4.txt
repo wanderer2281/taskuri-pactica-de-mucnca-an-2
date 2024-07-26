@@ -1,0 +1,83 @@
+            Capitolul 9
+            
+        In acest capitol am invatat despre  retele la care este conectat o masina Linux .
+Din acest capitol , cele mai importante 3 lucruri pe care l-am invatat sunt :
+1) La transmiterea de date dintre gazde , fie din aceeasi retea , fie dintr-o retea diferita ,
+ datele sunt transmise in bucati , numite pachete .
+2) Fiecare sistem de calcul are cel putin o adresa IP , ce are rolul de a identifica fiecare sistem .
+Un router are cel putin 2 adrese IP , una pentru a se conecta la o subretea , iar cealata pentru a se conecta la internet. 
+Tousi , router-ul poate avea mai multe adrese IP , in functie de numarul de numarul de subretele la care este conectat
+3) Pentru  a ne proteja computer-ul ,  router-ele ar trebui mereu sa contina un firewall .
+Un firewall este o componenta software sau/si hardware care sta intre internet si subretelele la care este conectat , monitorizeaza
+traficul de date ce vine inspre subretele , impiedicand virusi , ransamware , sau accesul la site-uri nedorite . 
+
+            Capitolul 10
+            
+      In acest capitol am invatat despre serviciile si aplicatiile retelei.
+Astfel , cele mai importante lucruri pe care le-am invatat din acest capitol sunt :
+
+1) Cel mai simplu serviciu de retea este telnet .Acesta este construit pe un flux bidirectional
+de date .
+2) Serverele de retea sunt precum alti daemoni de pe sistem , cum e cron , numai ca ele comunica
+cu porturile .Deasemenea , serverele opereaza ca procese multiple , unul din procese fiind dedicat dedectarii de 
+noi conexiuni la un port , apoi , daca gaseste o noua conexiune , creeaza un nou subprocess copil cu fork() , ce este
+responsabil pentru noua conexiune .
+3) Securitatea sistemului pate fi intarita prin urmatoarele actiuni luate de catre utilizator :
+    a) Executa cat mai putine servicii posibile
+    b) Blocheaza cat mai mult posibil cu firewall
+    c) Tine cont de serviciile care le oferi pe internet ( precum ssh si Postfix)
+    d) Foloseste distributii cu suport de durata lunga pentru servere
+    e) Nu da conturi la sistem , decat daca este necesar
+    f) Evita instalarea de pachete binare dubioase , deoarece acestea pot fi cai Troiani 
+    
+    Capitolul 11
+    
+ In acest capitol am invatat despre despre script-uri . Acestea sunt comenzi scrise intr-un fisier , pe care shell-ul
+ le citeste si le executa ca si cum ar fi fost scrise in linia de comanda . Din acest capitol , 3 lucruri mi-au iesit in
+ evidenta :
+ 
+ 1) Ca un fisier script sa functioneze corespunzator , acesta trebuie sa fie readable(sa poata fi citit) si executabil .
+    acest lucru poate fi efectuat usor  , prin executarea comenzi chmod +rx [script_name]
+    
+ 2)  Script-urile de multe ori folosesc literali . Acestea sunt siriuri de caracter pe care shell-ul nu le modifica sau analizeaza,
+ ci le trimite direct in linia de comanda
+ 
+ 3) Scripturile pot fi scrise precum un program creat intr-un limbaj de programare( C++ , Java) .
+ Astfel , shell-ul uni script poate avea conditionale ( if , elif ,else , fi) , Constructii logice ( && , || , -a, -o)
+ Conditii repetitive (for str in one two three four; do
+    echo $str
+done                           ::  while [conditie] ; do
+                                          [comenzi]
+                                          done
+                                          
+                                          
+                   Capitolul 12
+                   
+     In acest capitol am invata despre transmiterea si distribuirea fisiereleor , directoarelor 
+si datelor intr-o retea .Astfel , in Linux , exista multe metode prin care poti copia , transfera 
+si distribui fisiere intre utilizatori ce se afla conectati la aceeasi retea , dar si intre servere si utilizatori . 
+Astfel , din acest capitol , cele mai importante 3 lucruri pe care le-am invatat sunt:
+
+    1) Poti face copi de fisiere/ directoare utilizand comenziile   python -m SimpleHTTPServer , ce face toate fisierele
+din directorul curent disponibile tuturor utilizatorilor conectati la reteaua SimpleHTTPServer.
+Deasemenea , poti copia un fisier sau un director de la o masina la alta , conectate la aceeasi retea utilizand comanda
+rsync . 
+    2) Poti distrubui fisiere folosindSamba . Aceasta permite transmiterea  de fisiere intre  calculatoare ce folosesc 
+SO windows si sistemul de operare Linux . Pentru a putea transferul de fisiere , trebuie sa creezi un server Samba .
+Pentru crearea unui Server Samba trebuie sa efectuezi urmatoarele opertii : 
+- Creearea uni fisier smb.conf
+- Adaugarea de sharing connections la smb.conf
+- Pornirea daemoni-lor samba nmbd si smbd 
+    Deasemenea , poti utiliza un sistem SSHFs pentru a transmite date intre sistem UNIX .
+Acesta este un  user-space filesystem ce deschide un server ssh , ce prezinta fisierele ce doresc a fi
+accesate la un mountpoint..
+    Mai poti transmite fisiere intre sistemele Unix folosind NFS. NFS este cel mai comun
+sistem utilizat pentru distribuirea de fisiere . Astfel , poti monta un director pe un server cu NFS, folosind sintaxa de mai jos :
+    mount -t -nfs [server]:[directory]  [mountpoint]
+       3) Securitatea sistemelor de distribuire a fisierelor nu a fost niciodata de prioritate ridicata.
+Acest lucru a facut ca daca un utilizator are indoieli in legatura cu  securitatea retelei ,
+va trebui sa consideri autentificarea ,autorizarea si  incriptarea in configurarea sistemului .
+Astfel , numai utilizatori cu credentialele necesare vor avea acces la fisiere (lucru asigurat
+de autentificare si autorizare )  iar  nimeni nu va putea sa fure datele in timpul tranzitiei lor
+catre destinatie (lucru asigurat de incriptie ) .
+

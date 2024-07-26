@@ -1,0 +1,366 @@
+1) from a USB mounted setup
+
+sebastian@debian:~$ cd Desktop/LinuxScripts/task4
+sebastian@debian:~/Desktop/LinuxScripts/task4$ echo 3 | sudo tee /proc/sys/vm/drop_caches
+[sudo] password for sebastian: 
+3
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.351s
+user	0m0.055s
+sys	0m0.017s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.032s
+user	0m0.032s
+sys	0m0.000s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.033s
+user	0m0.029s
+sys	0m0.004s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.034s
+user	0m0.026s
+sys	0m0.009s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.034s
+user	0m0.029s
+sys	0m0.005s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.033s
+user	0m0.032s
+sys	0m0.001s
+
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water masina
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.037s
+user	0m0.028s
+sys	0m0.009s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water masina
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.036s
+user	0m0.031s
+sys	0m0.005s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water masina
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.036s
+user	0m0.032s
+sys	0m0.005s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water masina
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.036s
+user	0m0.028s
+sys	0m0.009s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/tmpdir/pg345.txt  without water masina
+It works
+the path: /home/sebastian/tmpdir/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/tmpdir/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.036s
+user	0m0.031s
+sys	0m0.005s
+
+
+
+
+
+
+
+2) From a RAM mounted setup
+
+sebastian@debian:~$ sudo mount -t tmpfs -o size=2G tmpfs /home/sebastian/ramdisk
+[sudo] password for sebastian: 
+sebastian@debian:~$ echo 3 | sudo tee /proc/sys/vm/drop_caches
+3
+sebastian@debian:~$ cd Desktop/LinuxScripts/task4
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water 
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.331s
+user	0m0.030s
+sys	0m0.010s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water 
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.032s
+user	0m0.028s
+sys	0m0.004s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water 
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.034s
+user	0m0.025s
+sys	0m0.008s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water 
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.034s
+user	0m0.034s
+sys	0m0.000s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water 
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+{'without': 131, 'water': 68}
+
+real	0m0.033s
+user	0m0.033s
+sys	0m0.000s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water masina
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.032s
+user	0m0.032s
+sys	0m0.000s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water masina
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.037s
+user	0m0.033s
+sys	0m0.004s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water masina
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.037s
+user	0m0.030s
+sys	0m0.007s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water masina
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.036s
+user	0m0.024s
+sys	0m0.012s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water masina
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.036s
+user	0m0.028s
+sys	0m0.008s
+sebastian@debian:~/Desktop/LinuxScripts/task4$ time python3 line-reader.py /home/sebastian/ramdisk/pg345.txt  without water masina
+It works
+the path: /home/sebastian/ramdisk/pg345.txt exists
+the path leads to a file
+the path: /home/sebastian/ramdisk/pg345.txt is valid
+the file is plain text
+It works
+['without', 'water', 'masina']
+the word without  appears  131  times in the text file
+the word water  appears  68  times in the text file
+the word masina  appears  1  times in the text file
+{'without': 131, 'water': 68, 'masina': 1}
+
+real	0m0.036s
+user	0m0.028s
+sys	0m0.008s
+
+
+
+
