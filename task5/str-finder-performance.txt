@@ -1,0 +1,350 @@
+1) performanta fara nimic salvat in fisierele hashing sau storage
+
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py /home/sebastian/tmpdir/  without water
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+['without', 'water']
+in the file pg345.txt the words given a parameters appear the following amount of times:
+the word without appears 131 times
+the word water appears 68 times
+the file pg345.2.txt is plain text
+['without', 'water']
+in the file pg345.2.txt the words given a parameters appear the following amount of times:
+the word without appears 131 times
+the word water appears 68 times
+the file test.txt is plain text
+['without', 'water']
+in the file test.txt the words given a parameters appear the following amount of times:
+the word without doesn't appear 
+the word water doesn't appear 
+In the directory /home/sebastian/tmpdir/ the words given as parameters appear the following amount of times:
+the word without appears 262 times
+the word water appears 136 times
+
+real	0m0.472s
+user	0m0.131s
+sys	0m0.027s
+
+
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py  /home/sebastian/tmpdir/  without water masina
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water', 'masina']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+['without', 'water', 'masina']
+in the file pg345.txt the words given a parameters appear the following amount of times:
+the word without appears 131 times
+the word water appears 68 times
+the word masina doesn't appear 
+the file pg345.2.txt is plain text
+['without', 'water', 'masina']
+in the file pg345.2.txt the words given a parameters appear the following amount of times:
+the word without appears 131 times
+the word water appears 68 times
+the word masina appears one time
+the file test.txt is plain text
+['without', 'water', 'masina']
+in the file test.txt the words given a parameters appear the following amount of times:
+the word without doesn't appear 
+the word water doesn't appear 
+the word masina doesn't appear 
+In the directory /home/sebastian/tmpdir/ the words given as parameters appear the following amount of times:
+the word without appears 262 times
+the word water appears 136 times
+the word masina appears one time
+
+real	0m0.581s
+user	0m0.160s
+sys	0m0.025s
+
+
+
+2) performanta cand se afla ceva in fisierele hashing si storage
+
+
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py /home/sebastian/tmpdir/  without water
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+the file pg345.2.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.2.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+the file test.txt is plain text
+In the file /home/sebastian/tmpdir/test.txt the words given as parameters appear the following amount of times
+The word without appears 0
+The word water appears 0
+In the directory /home/sebastian/tmpdir/  the words given as parameters appear the following amount of times
+The word without appears 262
+The word water appears 136
+
+real	0m0.066s
+user	0m0.051s
+sys	0m0.016s
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py /home/sebastian/tmpdir/  without water
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+the file pg345.2.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.2.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+the file test.txt is plain text
+In the file /home/sebastian/tmpdir/test.txt the words given as parameters appear the following amount of times
+The word without appears 0
+The word water appears 0
+In the directory /home/sebastian/tmpdir/  the words given as parameters appear the following amount of times
+The word without appears 262
+The word water appears 136
+
+real	0m0.032s
+user	0m0.020s
+sys	0m0.012s
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py /home/sebastian/tmpdir/  without water
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+the file pg345.2.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.2.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+the file test.txt is plain text
+In the file /home/sebastian/tmpdir/test.txt the words given as parameters appear the following amount of times
+The word without appears 0
+The word water appears 0
+In the directory /home/sebastian/tmpdir/  the words given as parameters appear the following amount of times
+The word without appears 262
+The word water appears 136
+
+real	0m0.032s
+user	0m0.021s
+sys	0m0.012s
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py /home/sebastian/tmpdir/  without water
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+the file pg345.2.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.2.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+the file test.txt is plain text
+In the file /home/sebastian/tmpdir/test.txt the words given as parameters appear the following amount of times
+The word without appears 0
+The word water appears 0
+In the directory /home/sebastian/tmpdir/  the words given as parameters appear the following amount of times
+The word without appears 262
+The word water appears 136
+
+real	0m0.031s
+user	0m0.027s
+sys	0m0.005s
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py /home/sebastian/tmpdir/  without water
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+the file pg345.2.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.2.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+the file test.txt is plain text
+In the file /home/sebastian/tmpdir/test.txt the words given as parameters appear the following amount of times
+The word without appears 0
+The word water appears 0
+In the directory /home/sebastian/tmpdir/  the words given as parameters appear the following amount of times
+The word without appears 262
+The word water appears 136
+
+real	0m0.032s
+user	0m0.024s
+sys	0m0.009s
+
+
+
+
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py  /home/sebastian/tmpdir/  without water masina
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water', 'masina']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+The word masina appears 0
+the file pg345.2.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.2.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+The word masina appears 1
+the file test.txt is plain text
+In the file /home/sebastian/tmpdir/test.txt the words given as parameters appear the following amount of times
+The word without appears 0
+The word water appears 0
+The word masina appears 0
+In the directory /home/sebastian/tmpdir/  the words given as parameters appear the following amount of times
+The word without appears 262
+The word water appears 136
+The word masina appears 1
+
+real	0m0.068s
+user	0m0.054s
+sys	0m0.012s
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py  /home/sebastian/tmpdir/  without water masina
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water', 'masina']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+The word masina appears 0
+the file pg345.2.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.2.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+The word masina appears 1
+the file test.txt is plain text
+In the file /home/sebastian/tmpdir/test.txt the words given as parameters appear the following amount of times
+The word without appears 0
+The word water appears 0
+The word masina appears 0
+In the directory /home/sebastian/tmpdir/  the words given as parameters appear the following amount of times
+The word without appears 262
+The word water appears 136
+The word masina appears 1
+
+real	0m0.065s
+user	0m0.057s
+sys	0m0.008s
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py  /home/sebastian/tmpdir/  without water masina
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water', 'masina']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+The word masina appears 0
+the file pg345.2.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.2.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+The word masina appears 1
+the file test.txt is plain text
+In the file /home/sebastian/tmpdir/test.txt the words given as parameters appear the following amount of times
+The word without appears 0
+The word water appears 0
+The word masina appears 0
+In the directory /home/sebastian/tmpdir/  the words given as parameters appear the following amount of times
+The word without appears 262
+The word water appears 136
+The word masina appears 1
+
+real	0m0.068s
+user	0m0.050s
+sys	0m0.015s
+sebastian@debian:~/Desktop/LinuxScripts/task5$ time python3 str-finder.py  /home/sebastian/tmpdir/  without water masina
+['hashing', 'pg345.txt', 'pg345.2.txt', 'test.txt']
+the path: /home/sebastian/tmpdir/ exists
+Some files found in the directory.
+['without', 'water', 'masina']
+6cb6419ed5f17f880b6492a16f85a17dbc2d996da5874c8f4d6453f20d1ff79b
+da18ba5f58739e0ed8ef60c48c71fca4ea154f7ef62d90f27cb6db5d3807b760
+926c1bd81970e0ca87bea133b68f5f4a65a950508f2572c7a87d77606e086a6c
+be211da916e05915a91be15de63da464b5d4ea450db57e245de4f0cbda2564dd
+the file pg345.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+The word masina appears 0
+the file pg345.2.txt is plain text
+In the file /home/sebastian/tmpdir/pg345.2.txt the words given as parameters appear the following amount of times
+The word without appears 131
+The word water appears 68
+The word masina appears 1
+the file test.txt is plain text
+In the file /home/sebastian/tmpdir/test.txt the words given as parameters appear the following amount of times
+The word without appears 0
+The word water appears 0
+The word masina appears 0
+In the directory /home/sebastian/tmpdir/  the words given as parameters appear the following amount of times
+The word without appears 262
+The word water appears 136
+The word masina appears 1
+
+real	0m0.066s
+user	0m0.056s
+sys	0m0.008s
+
+
