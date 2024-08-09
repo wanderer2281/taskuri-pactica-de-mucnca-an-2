@@ -1,0 +1,70 @@
+#Pentru fisiere in
+
+
+
+sebastian@debian:~/Desktop/LinuxScripts/task6/get.cache$ time python3 gen-input2.py  /home/sebastian/Desktop/LinuxScripts/task6/files.in  in 20 100000 25
+
+
+
+6
+100005
+25001
+
+real	1m23.947s
+user	1m21.043s
+sys	0m1.687s
+
+
+
+sebastian@debian:~/Desktop/LinuxScripts/task6/get.cache$ time python3 gen-input2.py  /home/sebastian/Desktop/LinuxScripts/task6/files.in  in 20 100000 25 nocache
+7
+100010
+25003
+
+real	1m21.721s
+user	1m21.441s
+sys	0m0.177s
+
+
+sebastian@debian:~/Desktop/LinuxScripts/task6/get.cache$ time python3 gen-input2.py  /home/sebastian/Desktop/LinuxScripts/task6/files.in  in 20 100000 25 
+6
+100000
+25004
+
+real	1m23.167s
+user	1m21.332s
+sys	0m1.792s
+
+
+sebastian@debian:~/Desktop/LinuxScripts/task6/get.cache$ time python3 gen-input2.py  /home/sebastian/Desktop/LinuxScripts/task6/files.in  in 20 100000 25 
+6
+100002
+25000
+
+real	1m23.366s
+user	1m21.454s
+sys	0m1.872s
+
+
+# Pentru fisiere in.x
+
+
+sebastian@debian:~/Desktop/LinuxScripts/task6/get.cache$ time python3 gen-input2.py  /home/sebastian/Desktop/LinuxScripts/task6/files.in.x/ in.x 20 100000 25
+6
+100004
+25002
+
+real	8m16.946s
+user	8m15.297s
+sys	0m1.564s
+
+
+sebastian@debian:~/Desktop/LinuxScripts/task6/get.cache$ time python3 gen-input2.py  /home/sebastian/Desktop/LinuxScripts/task6/files.in.x/ in.x 20 100000 25 nocache
+7
+100006
+25001
+
+real	8m7.555s
+user	8m7.432s
+sys	0m0.061s
+
